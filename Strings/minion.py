@@ -1,5 +1,5 @@
 import re
-import sys
+
 
 def minion_game2(word):
     vowels = 'AEIOU'
@@ -23,18 +23,19 @@ def minion_game2(word):
     else:
         print('Stuart {}'.format(stu_score))
 
+
 def get_substring2(word, i, game_dict):
-    for j in range(i+1, len(word)+1):
+    for j in range(i + 1, len(word) + 1):
         frag = word[i:j]
-        if not frag in game_dict:
+        if frag not in game_dict:
             game_dict[frag] = find_all(word, frag)
-   
+
 
 def find_all(word, frag):
     pattern = r'(?={})'.format(frag)
     # print(pattern)
     return len(re.findall(pattern, word))
-    
+
 
 def minion_game(word):
     vowels = 'AEIOU'
