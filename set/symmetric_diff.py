@@ -4,7 +4,7 @@ def diff(list_1, list_2):
     diff_1 = set_1.difference(set_2)
     diff_2 = set_2.difference(set_1)
     set_3 = diff_1.union(diff_2)
-    print(set_3)
+    # print(set_3)
     arr = []
     arr.extend(set_3)
     arr.sort()
