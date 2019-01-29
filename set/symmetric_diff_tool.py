@@ -4,5 +4,5 @@ if __name__ == '__main__':
     b = int(input())
     set_b = set(map(int, input().split()))
     set_a = set_a ^ set_b
-    print(set_a)
+    # print(set_a)
     print(len(set_a))
